@@ -1,0 +1,285 @@
+<!--
+    Optima Academy Online - INTERACTIVE Student Lesson Page.
+    Mississippi History - Module 34 - Lesson 34.2
+    DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mississippi History &mdash; Lesson 34.2</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
+    a.gl { color: #0E1C42; text-decoration: none; border-bottom: 1.5px dotted #1B6A94; }
+    a.gl:hover { background: #E8F6FB; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">MISSISSIPPI HISTORY</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 34</div>
+        <div style="font-size: 12px; color: #666;">Storm and Rebuilding</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 34.2</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Rebuilding the Coast</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Storm and Rebuilding</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 34.2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Rebuilding the Coast</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">After Katrina, Mississippians faced a hard question. Should they rebuild their homes, their ports, and their casinos in the places that the storm had just flattened? Who would pay, and who would decide?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This lesson follows the rebuilding of the coast after 2005. It shows how the state, federal, and local governments divide the work of disaster relief, and it asks what a community owes to its own future when it chooses where to live.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the roles that federal, state, and local governments play in disaster recovery.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the main arguments for and against rebuilding on the coast.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> evaluate how rebuilding can balance a community's history and its safety.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Internet access to view this lesson page and its interactive checks</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or digital document for your reading notes</div>
+        </div>
+    </div>
+
+    <div id="glossary" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #1B6A94; margin-bottom: 10px;">&#128161; GLOSSARY</div>
+        <div style="font-size: 15px; color: #0E1C42; margin-bottom: 12px;">A few words in this lesson are worth reviewing before you read.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">FEMA</strong> <span style="color: #666; font-size: 14px;">(FEE-muh)</span>: The Federal Emergency Management Agency, a part of the national government that helps people and states recover from disasters.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">floodplain</strong> <span style="color: #666; font-size: 14px;">(FLUD-playn)</span>: Low land next to the sea or a river that is likely to be covered by water in a flood.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">MEMA</strong> <span style="color: #666; font-size: 14px;">(MEE-muh)</span>: The Mississippi Emergency Management Agency, the state office that plans for disasters and leads the state's response.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">mitigation</strong> <span style="color: #666; font-size: 14px;">(mit-ih-GAY-shun)</span>: Steps taken before a disaster to make its damage smaller, such as building houses higher or stronger.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHO HELPS</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Three Levels of Government</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When a hurricane strikes, three levels of government act at once. Local governments, such as cities and county boards of supervisors, clear roads and open shelters. The state, through <a class="gl" href="#glossary" title="The Mississippi Emergency Management Agency, the state office that plans for disasters and leads the state's response."><strong>MEMA</strong></a> and the governor, calls out the National Guard and asks for federal help. The national government, through <a class="gl" href="#glossary" title="The Federal Emergency Management Agency, a part of the national government that helps people and states recover from disasters."><strong>FEMA</strong></a> and Congress, supplies money, supplies, and teams of workers. This is federalism at work, with each level doing what it is best placed to do.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">After Katrina, Congress approved billions of dollars in aid. Governor Haley Barbour, who held office from 2004 to 2012, appointed a commission led by the businessman Jim Barksdale to plan the recovery. The state used federal grants to help homeowners rebuild, and thousands of volunteers from churches and charities came to gut flooded houses and put on new roofs. Relief did not move quickly or evenly. Many families waited months for help, and some waited years.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Insurance mattered as much as aid. Many owners learned that their policies covered damage from wind but not from rising water, and they argued with their insurers about which one had destroyed the house. Those disputes went to court, and they showed that a family's money and its trust can be tested twice, first by the storm and then by the paperwork.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aid also raised hard questions of fairness. A family with savings, good insurance, and relatives nearby could rebuild faster than a family with none of those. Elderly owners and renters, who had less to start with, often waited the longest. Officials had to decide whether to give help first to those who could use it quickly or to those who had the greatest need. Neither choice was free of cost, and the choices were made under pressure, with imperfect information.</p>
+<div class="optima-widget ow-select">
+  <div class="widget-kicker">&#9989; CHECK YOUR UNDERSTANDING</div>
+  <div class="widget-question">Check your understanding. Which level of government does each task?</div>
+  <div class="widget-row" data-fb="Yes. Local governments handle the roads they manage." data-hint="Think of the closest level of government.">
+    <div class="widget-row-prompt">A county board clears fallen trees from local roads.</div>
+    <div class="widget-options"><button data-correct="1">Local government</button><button>State government</button><button>Federal government</button></div>
+  </div>
+  <div class="widget-row" data-fb="Right. The governor commands the state's Guard." data-hint="Think of the governor's role.">
+    <div class="widget-row-prompt">The governor calls out the National Guard.</div>
+    <div class="widget-options"><button>Local government</button><button>Federal government</button><button data-correct="1">State government</button></div>
+  </div>
+  <div class="widget-row" data-fb="Correct. Congress makes federal spending laws." data-hint="Think of the body that writes national budgets.">
+    <div class="widget-row-prompt">Congress approves billions of dollars for recovery.</div>
+    <div class="widget-options"><button>State government</button><button>Local government</button><button data-correct="1">Federal government</button></div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE ARGUMENT</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">To Rebuild or Not to Rebuild</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Should the coast be rebuilt where it stood? People on both sides had good reasons. Those who said yes pointed to the history. Families had lived there for generations, and the coast's seafood, shipbuilding, port, and tourism supported thousands of jobs. Walking away would also tell the world that a hurricane could erase a community. Many owners felt that they had a right to rebuild their own land.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Those who said no pointed to the next storm. Rebuilding on low ground invites the same loss again, and the cost often falls on taxpayers across the country, who pay for flood insurance and disaster aid. Wetlands and barrier islands, they said, protect the coast and should be left alone. These critics were not unkind. They asked whether it is wise to ask the public to pay for the same house twice.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A classical thinker would see a real conflict of goods. One is liberty, the right of owners to use their own land. The other is the common good, which includes the safety of neighbors and the fair use of public money. A wise community looks for rules that respect both. It is not easy, and reasonable people reach different answers. You will weigh them in the discussion this week.</p>
+<div class="optima-widget ow-reflect">
+  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+  <div class="widget-question">Before you move on: which argument weighs more with you? (No wrong answer.)</div>
+  <div class="widget-options"><button data-response="That is a strong feeling, and for many families it was decisive. Ask what it would cost them if the next storm arrived.">The pull of home</button><button data-response="A fair point. Ask who should pay when private choices create public risks.">The cost to taxpayers</button><button data-response="Natural barriers can reduce a storm's force. Ask how much value they add and how to weigh it against homes.">Protecting the wetlands</button></div>
+  <div class="widget-feedback"></div>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHAT CHANGED</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Rebuilding the Economy and the Shore</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Rebuilding changed the coast. After Katrina the legislature allowed casinos to be built on land close to the water, so that they would not be washed away on barges. Larger resorts followed. The Port of Gulfport was repaired, shipyards in Pascagoula returned to work, and new bridges were built higher than the old ones. U.S. 90 was reopened, and the damaged railroad was later rebuilt in other places.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">New rules also followed. Federal <a class="gl" href="#glossary" title="Low land next to the sea or a river that is likely to be covered by water in a flood."><strong>floodplain</strong></a> maps were redrawn after both storms, and in some areas new homes had to be built on higher foundations. Coastal counties adopted stronger building codes. These steps are called <a class="gl" href="#glossary" title="Steps taken before a disaster to make its damage smaller, such as building houses higher or stronger."><strong>mitigation</strong></a>. They cost owners money today, and they may save lives in the next storm. Building higher is the sort of choice that wins no praise until the day it is needed.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Some of the people who rebuilt were new to the state. Vietnamese Americans, who worked in the coast's fishing and shrimping trades, returned to their boats and their churches. You will meet them in the next module. The coast's recovery was not the work of one group. It was the work of many people who decided to stay.</p>
+<div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+  <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; MISSISSIPPI HISTORY</div>
+  <div style="font-size: 17px; color: #0E1C42; margin-bottom: 8px;"><strong>The Lighthouse and the Oaks</strong></div>
+  <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Biloxi's cast-iron lighthouse, built in the 1850s, is often said to have stood through Camille and Katrina, and it remains a symbol of the coast. The old live oaks along the shore were harmed too, though some survived the water and some were later carved into sculptures by local artists. Details of the stories vary, and you should check them against reliable local sources. What matters here is that people turned loss into something they could look at and remember.</div>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; A STATE JUDGMENT</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Remembering Wisely</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Mississippi has lived through floods, wars, and hurricanes. In each case, the state's leaders had to decide how much to protect, how much to forget, and how much to spend. The coast's story gives you a chance to study those decisions up close, with records that are recent and a population that remembers.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Return to the question that opened this lesson. The best answer may not be a single yes or no. It may be a rule for rebuilding that keeps the memory of the storm, as Camille was once kept, and keeps people safe, as Camille's memory did not.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Citizens have a part in this too. A family can learn its evacuation zone, keep its papers and medicines ready, and check on elderly neighbors before a storm. A voter can ask candidates what they plan to do about building rules, flood maps, and the cost of insurance. A supervisor or alderman who hears from citizens before a storm is better prepared than one who hears only afterward. In Lesson 32.2 you saw that local government works best when citizens watch it. Disaster work is one of the clearest tests of that idea, because the officials who must act are neighbors and the people who must be saved are neighbors as well.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The coast has since rebuilt much of what it lost, but recovery is never fully finished. Some families never returned, some lots remain empty, and some towns are smaller than they were. Others are busier than ever. Measuring a recovery honestly means looking at both kinds of places and not only at the new resorts on the beach.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 34.1</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read a Weather Bureau report on Hurricane Camille.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 34.2</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read a federal or state report on Hurricane Katrina.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: Should Mississippians Rebuild on the Coast?</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Take a position and support it with evidence from this module.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>VR Activity</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Complete the VR Activity in your VR headset when it is available in Canvas.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The coast was rebuilt by people from many backgrounds. Next week asks who has come to Mississippi over the years, and what it takes to belong.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 34.2 &middot; Rebuilding the Coast</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-row').forEach(function (r) { r.classList.remove('solved'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      if (row.classList.contains('solved')) { return; }
+      row.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('incorrect'); });
+      var msg = document.createElement('div');
+      msg.className = 'row-feedback';
+      if (sBtn.dataset.correct === '1') {
+        sBtn.classList.add('correct');
+        row.classList.add('solved');
+        msg.classList.add('correct');
+        msg.textContent = row.dataset.fb || 'Correct.';
+      } else {
+        sBtn.classList.add('incorrect');
+        msg.classList.add('incorrect');
+        msg.textContent = row.dataset.hint || 'Not quite. Try again.';
+      }
+      row.appendChild(msg);
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
