@@ -1,0 +1,282 @@
+<!--
+    Optima Academy Online - INTERACTIVE Student Lesson Page.
+    Mississippi History - Module 36 - Lesson 36.1
+    DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mississippi History &mdash; Lesson 36.1</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
+    a.gl { color: #0E1C42; text-decoration: none; border-bottom: 1.5px dotted #1B6A94; }
+    a.gl:hover { background: #E8F6FB; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">MISSISSIPPI HISTORY</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 36</div>
+        <div style="font-size: 12px; color: #666;">What Mississippi Gave the World</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 36.1</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Music: Blues, Gospel, Elvis</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">What Mississippi Gave the World</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 36.1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Music: Blues, Gospel, Elvis</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A man waiting for a train in a Delta town heard a stranger slide a knife along the strings of a guitar. He never forgot it. Within a few decades that sound, born among poor Black Mississippians, was changing the music of the whole world. How did so much music come from a state with so little money, and what does it say about the people who made it?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This lesson follows the music of Mississippi from the blues of the Delta to gospel and country to the young man from Tupelo who joined them together. It asks what the music grew from, how it spread, and what it shows about a state that gave the world great beauty while denying many of its own people their rights.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the origins of the blues in the Mississippi Delta and name major figures.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how gospel, country, and the blues influenced one another, including in the career of Elvis Presley.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> evaluate how great art can come from a society that was unjust to many of its members.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Internet access to view this lesson page and its interactive checks</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or digital document for your reading notes</div>
+        </div>
+    </div>
+
+    <div id="glossary" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #1B6A94; margin-bottom: 10px;">&#128161; GLOSSARY</div>
+        <div style="font-size: 15px; color: #0E1C42; margin-bottom: 12px;">A few words in this lesson are worth reviewing before you read.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">blues</strong> <span style="color: #666; font-size: 14px;">(blooz)</span>: A kind of music that began among Black Mississippians in the late 1800s, known for its sad or wry lyrics and its bending of notes.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">folklorist</strong> <span style="color: #666; font-size: 14px;">(FOHK-lor-ist)</span>: A scholar who collects and studies the songs, stories, and customs of ordinary people.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">gospel</strong> <span style="color: #666; font-size: 14px;">(GOS-pul)</span>: Religious music, rooted in the Black church, with strong harmonies and a message of faith and hope.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">juke joint</strong> <span style="color: #666; font-size: 14px;">(jook joynt)</span>: A small, informal place in the rural South where people gathered to drink, dance, and hear live music, especially the blues.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE BLUES</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Born in the Delta</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The story of the blues is often traced to the Mississippi Delta. In the late 1800s, Black families who worked the cotton fields sang field hollers, work songs, and church spirituals. From those sources came a new music. The <a class="gl" href="#glossary" title="A kind of music that began among Black Mississippians in the late 1800s, known for its sad or wry lyrics and its bending of notes."><strong>blues</strong></a> is built on a simple pattern, usually twelve bars long, and its words speak of trouble, love, and sometimes a wry humor that turns hardship into something a person can stand to sing about. A single guitar, a harmonica, and a voice were enough.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The composer W. C. Handy, a Black bandleader from Alabama, said that he first heard the music in 1903 at the train station in Tutwiler, where a man played guitar with a knife blade pressed against the strings. Handy later wrote down and published blues songs, and he became known as the Father of the Blues. His story, which he told himself, is one of the most famous in American music, and like any story told by one person, it should be read with care. But it points to something real: the sound was already in the Delta, waiting to be noticed.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Charley Patton, who played at Dockery Farms near Ruleville, is remembered as one of its first great voices. Robert Johnson, who died young in 1938, left a few recordings that later artists studied for decades. A legend says he sold his soul to the devil at a crossroads, but no record supports it. Muddy Waters grew up on a plantation near Clarksdale. B.B. King, who came from the Indianola area, spent much of his life taking the music to audiences around the world. Howlin' Wolf, from West Point, was known for his huge voice. Each of them found a way to make a life from music when other doors were closed.</p>
+<div class="optima-widget ow-select">
+  <div class="widget-kicker">&#9989; CHECK YOUR UNDERSTANDING</div>
+  <div class="widget-question">Check your understanding. Match each person or place to the right fact.</div>
+  <div class="widget-row" data-fb="Yes. W. C. Handy wrote down and published blues songs." data-hint="Think of the bandleader who told the Tutwiler story.">
+    <div class="widget-row-prompt">Called the Father of the Blues, and said he first heard the music in Tutwiler.</div>
+    <div class="widget-options"><button>B.B. King</button><button data-correct="1">W. C. Handy</button><button>Robert Johnson</button><button>Elvis Presley</button></div>
+  </div>
+  <div class="widget-row" data-fb="Right. The legend is told widely, though no record supports it." data-hint="Look at the paragraph about the legend.">
+    <div class="widget-row-prompt">Left a few recordings and died in 1938, with a famous legend about a crossroads.</div>
+    <div class="widget-options"><button data-correct="1">Robert Johnson</button><button>Howlin' Wolf</button><button>Charley Patton</button><button>Muddy Waters</button></div>
+  </div>
+  <div class="widget-row" data-fb="Correct. Patton's music shaped those who came after." data-hint="Look for the Ruleville musician.">
+    <div class="widget-row-prompt">Played at Dockery Farms and is remembered as one of the first great Delta voices.</div>
+    <div class="widget-options"><button>Muddy Waters</button><button>B.B. King</button><button>W. C. Handy</button><button data-correct="1">Charley Patton</button></div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; LISTENING TO THE DELTA</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Lomax and the Sound Collectors</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1941 and 1942, the <a class="gl" href="#glossary" title="A scholar who collects and studies the songs, stories, and customs of ordinary people."><strong>folklorist</strong></a> Alan Lomax came to Coahoma County to record the music of the Delta for the Library of Congress. He worked with scholars from Fisk University, a Black university in Nashville. The recordings captured church songs, work songs, and blues. At a plantation near Clarksdale, a young tractor driver named McKinley Morganfield played for the recording machine. The world would later know him as Muddy Waters.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Why does this matter? Because such recordings let you hear the people themselves. They are primary sources. In Primary Source 36.2 you will study them as a historian would, asking what the singers meant and what the collectors chose to record. Remember that a recording is not an accident. Someone decided what to record, where to set up the machine, and whom to ask.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many of the musicians left Mississippi. During the Great Migration, which you read about in Module 33, thousands of Black families moved north on trains and highways to Memphis, St. Louis, and Chicago. Muddy Waters moved to Chicago in the 1940s, and there he plugged in an electric guitar and helped create the Chicago blues. Mississippi's music traveled with its people. It was a gift to the nation, given by those the state had often treated badly.</p>
+<div class="optima-widget ow-reflect">
+  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+  <div class="widget-question">Before you move on: why do you think the blues came from the Delta? (No wrong answer.)</div>
+  <div class="widget-options"><button data-response="Hard times are part of it. But many places had hard times. Ask what else the Delta had.">Hard times</button><button data-response="A strong answer. The singers drew on field hollers, spirituals, and work songs.">Church and work songs</button><button data-response="Recording and radio gave a few singers a wider audience. Ask who was left out.">A chance to be heard</button></div>
+  <div class="widget-feedback"></div>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; GOSPEL, COUNTRY, AND ELVIS</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Where the Streams Meet</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The same churches that taught young people to sing also produced <a class="gl" href="#glossary" title="Religious music, rooted in the Black church, with strong harmonies and a message of faith and hope."><strong>gospel</strong></a>. The Black church, with its strong harmony and its message of hope, gave Mississippi's music a second root. Roebuck Staples, who grew up near Winona, later led the Staple Singers, a family group whose gospel songs became part of the civil rights movement. In the 1980s the Mississippi Mass Choir was formed in Jackson and became one of the state's best-known gospel choirs. In the movement itself, as in the campaign you read about in Module 30, songs such as "This Little Light of Mine" gave courage to people who faced danger at the courthouse door.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">White Mississippians made music too. Jimmie Rodgers, from Meridian, sang songs that mixed blues, folk, and yodeling. Because of his influence, he is often called the Father of Country Music. He died young, in 1933, but his records were played for years. White and Black musicians heard one another on the radio, in the churches, and in the juke joints and street corners, even when the law kept them from sitting together.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Elvis Presley was born in Tupelo on January 8, 1935, in a two-room house that his father built. He grew up in a family that sang in the Assembly of God church, and at about age eleven he received his first guitar. In 1948 the family moved to Memphis. There, in 1954, he recorded for Sun Records a song that had been written by Arthur Crudup, a bluesman from Forest, Mississippi. In Elvis's voice you can hear the church, the blues, and country music together. That mixture made him famous. Whether Mississippians were proud of it or uneasy about it depended on who was listening.</p>
+<div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+  <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; MISSISSIPPI TODAY</div>
+  <div style="font-size: 17px; color: #0E1C42; margin-bottom: 8px;"><strong>Following the Blues Trail</strong></div>
+  <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Since the mid-2000s, the state has marked places linked to the blues with historical markers along what is called the Mississippi Blues Trail. A traveler can stand where a juke joint once stood or visit the museum in Tupelo near Elvis's birthplace. Some markers honor famous names, and others honor people who were never famous. The details of the trail change as markers are added, so it is best to check a current source. It is a reminder that music, like history, is something that people can visit.</div>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; BEAUTY AND INJUSTICE</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A Hard Question</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The music raises a hard question. The same state that made it also kept many of the musicians from voting, from eating in restaurants, and from sending their children to the best schools. How could so much beauty come from a place where so much was wrong? One answer is that the people who made the music did not wait for justice to make art. They made it from the life they had, and some of them also marched, registered, and risked their lives for something better.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A classical thinker would say that beauty and goodness are connected but not the same. A beautiful song does not make a society just, and an unjust society cannot erase the beauty of a song. Part of the work of history is to hold both facts without letting one cancel the other. As you listen to this music, and read about it, keep both in view.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 36.1</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read the river chapters of Mark Twain's Life on the Mississippi (1883).</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 36.2</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Study the Lomax recordings made in Coahoma County, 1941 to 1942.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: Why Mississippi?</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Take a position and support it with evidence from this module and from the whole course.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Complete the Primary Source Report in Canvas.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You have heard Mississippi's music. The final lesson turns to its writers and artists, and then it brings the whole course to a close.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 36.1 &middot; The Music: Blues, Gospel, Elvis</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-row').forEach(function (r) { r.classList.remove('solved'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      if (row.classList.contains('solved')) { return; }
+      row.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('incorrect'); });
+      var msg = document.createElement('div');
+      msg.className = 'row-feedback';
+      if (sBtn.dataset.correct === '1') {
+        sBtn.classList.add('correct');
+        row.classList.add('solved');
+        msg.classList.add('correct');
+        msg.textContent = row.dataset.fb || 'Correct.';
+      } else {
+        sBtn.classList.add('incorrect');
+        msg.classList.add('incorrect');
+        msg.textContent = row.dataset.hint || 'Not quite. Try again.';
+      }
+      row.appendChild(msg);
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
