@@ -41,6 +41,9 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
 </style>
 </head>
 <body>
@@ -344,6 +347,14 @@
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Vicksburg stood on tall <a href="#glossary" title="a high, steep bank beside a river or the sea." style="color: inherit; text-decoration: underline dotted;"><strong>bluffs</strong></a> above a sharp bend in the Mississippi River. Ships had to slow down to make the turn, and Confederate batteries on the heights could fire down on them. Soldiers called the city the Gibraltar of the Confederacy.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The land around the city made things harder for any army that wanted to attack. North of Vicksburg lay the Yazoo Delta, a flat country of swamps, <a href="#glossary" title="a slow, marshy stream or creek, common in the lowlands of the Deep South." style="color: inherit; text-decoration: underline dotted;"><strong>bayous</strong></a>, and thick woods that flooded in the wet months of the year. East of the city, steep ridges and deep gullies cut the ground into a maze. An army could march for days in those places and end up no closer to the <a href="#glossary" title="a high, steep bank beside a river or the sea." style="color: inherit; text-decoration: underline dotted;"><strong>bluffs</strong></a>.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Both presidents understood what was at stake. Abraham Lincoln is remembered as calling Vicksburg the key to the war, because whoever held it held the river. Jefferson Davis, who owned land south of the city along the river, knew that losing it would cut the Confederacy in two. The general Davis put in charge, John C. Pemberton, was born in Pennsylvania but chose the Confederate side. He commanded tens of thousands of men, with orders to hold Vicksburg at almost any cost.</p>
+        <div class="optima-widget ow-flipcard">
+            <div class="widget-kicker">&#9889; TAP TO REVEAL</div>
+            <div class="ow-flip" tabindex="0">
+                <div class="ow-flip-front" style="font-size:17px;color:#0E1C42;line-height:1.55;">Vicksburg was called the Gibraltar of the Confederacy. Name two things that made it so hard to take, then tap the card to check.</div>
+                <div class="ow-flip-back" style="font-size:16px;line-height:1.55;">The tall bluffs let Confederate batteries fire down on ships slowing for the river&rsquo;s sharp bend. North of the city lay the flooded Yazoo Delta, and east of it, steep ridges and deep gullies cut the ground into a maze.</div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -373,6 +384,11 @@
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On the night of April 16, 1863, Admiral David Dixon Porter's gunboats slid down the river with their lights out. Confederate gunners spotted them and lit bonfires, and for hours the sky flashed with cannon fire. Most of the boats made it through, and a week later more transports followed.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">While the boats ran the guns, Grant fooled his enemy. Colonel Benjamin Grierson led about 1,700 Union <a href="#glossary" title="soldiers who fight on horseback." style="color: inherit; text-decoration: underline dotted;"><strong>cavalry</strong></a> on a raid from La Grange, Tennessee, through the length of Mississippi to Baton Rouge, Louisiana, tearing up rails and burning supplies. The raid pulled Confederate attention away from the river. Sherman also made a <a href="#glossary" title="a fake attack meant to fool the enemy about where the real attack will come." style="color: inherit; text-decoration: underline dotted;"><strong>feint</strong></a> at the <a href="#glossary" title="a high, steep bank beside a river or the sea." style="color: inherit; text-decoration: underline dotted;"><strong>bluffs</strong></a> north of the city. Pemberton could not tell where the real blow would fall.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The navy first tried to land the army at Grand Gulf, but the Confederate guns there were too strong. Then Grant caught a piece of luck. According to his own memoirs, an enslaved man who came into the Union lines told him about a good road leading inland from a landing called Bruinsburg. Grant does not give the man's name, though the risk he took in crossing the lines to say it was real, and the campaign turned on it. On April 30, 1863, Union ships began carrying Grant's soldiers across the river there. By the next day, about 17,000 men stood on Mississippi soil.</p>
+        <div class="optima-widget ow-reveal">
+            <div class="widget-kicker">&#9999;&#65039; TRY IT FIRST</div>
+            <details><summary>In your notebook, list three things Grant did in April 1863 to fool or avoid the Confederate defenders at Vicksburg. Then click here to compare.</summary><div class="reveal-body">A strong list might include: marching down the Louisiana side, far from the guns; running the gunboats and transports past the batteries at night; Grierson&rsquo;s cavalry raid, which pulled attention away from the river; Sherman&rsquo;s feint at the bluffs north of the city; and crossing at Bruinsburg after Grand Gulf proved too strong. Notice that each move kept Pemberton guessing where the real blow would fall.</div></details>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -464,6 +480,7 @@
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.open = false; });
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');
