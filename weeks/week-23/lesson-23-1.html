@@ -41,6 +41,9 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
 </style>
 </head>
 <body>
@@ -346,6 +349,14 @@
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In March 1867, Congress passed the first <a href="#glossary" title="the period after the Civil War, from 1865 to 1877, when the nation tried to rebuild the South and decide the rights of freed people." style="color: inherit; text-decoration: underline dotted;"><strong>Reconstruction</strong></a> Act over President Johnson's veto. It set aside the governments created under Johnson's plan. It divided the South, except for Tennessee, into five military districts. Mississippi and Arkansas made up the Fourth, under General Edward O. C. Ord. To return to the Union, each state had to write a new constitution, allow Black men to vote, and <a href="#glossary" title="to approve an amendment or treaty so that it officially takes effect." style="color: inherit; text-decoration: underline dotted;"><strong>ratify</strong></a> the Fourteenth Amendment.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Opinion among white Mississippians was divided. Some Unionists and former Whigs, especially in the northeastern hills, were willing to work with Congress. Most white Democrats saw the Acts as an attack on the state's right to govern itself.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">None of this was certain. The Republicans in Congress were not all of one mind. Some wanted to move fast and some wanted to go slow. When Johnson clashed with them, the House impeached him in early 1868, and the Senate fell one vote short of removing him. A different vote might have changed the whole course of <a href="#glossary" title="the period after the Civil War, from 1865 to 1877, when the nation tried to rebuild the South and decide the rights of freed people." style="color: inherit; text-decoration: underline dotted;"><strong>Reconstruction</strong></a>.</p>
+        <div class="optima-widget ow-flipcard">
+            <div class="widget-kicker">&#9889; TAP TO REVEAL</div>
+            <div class="ow-flip" tabindex="0">
+                <div class="ow-flip-front" style="font-size:17px;color:#0E1C42;line-height:1.55;">The first Reconstruction Act divided the South into five military districts. Which district included Mississippi, who commanded it, and which other state was in it? Tap the card to check.</div>
+                <div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Mississippi was in the Fourth District, with Arkansas. General Edward O. C. Ord commanded it.</div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -373,6 +384,11 @@
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The state constitutional convention met in Jackson in January 1868 and worked for more than four months. Of the roughly one hundred <a href="#glossary" title="a person chosen to speak and vote for a larger group at a meeting." style="color: inherit; text-decoration: underline dotted;"><strong>delegates</strong></a>, about seventeen were Black, and most of the rest were white Republicans, some from the South and some from the North. Opponents mocked it as the Black and Tan convention. They meant it as an insult, but the convention did what no earlier Mississippi convention had done: it included Black voices in writing the state's highest law.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The new constitution gave the vote to all adult men, whatever their race. It removed property requirements for holding office. It set up the state's first system of free public schools for all children. Like the United States Constitution, it divided power among three branches of government and began with a bill of rights. Unlike the original United States Constitution, it addressed equal civil and political rights directly. It also ended slavery in plain terms, which the state's 1865 convention had done only reluctantly.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Parts of the constitution stirred fierce opposition. It barred many former Confederate officeholders from voting or serving, and it required voters to take a loyalty oath. Those clauses led many white voters to reject the document. In June 1868, Mississippi's voters turned it down.</p>
+        <div class="optima-widget ow-reveal">
+            <div class="widget-kicker">&#9999;&#65039; TRY IT FIRST</div>
+            <details><summary>In your notebook, list two ways the Constitution of 1868 was like the United States Constitution and two ways it was different. Then click here to compare.</summary><div class="reveal-body">Like the United States Constitution, it divided power among three branches of government and began with a bill of rights. Unlike the original United States Constitution, it addressed equal civil and political rights directly, ended slavery in plain terms, gave the vote to all adult men whatever their race, and set up the state&rsquo;s first system of free public schools for all children.</div></details>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -465,6 +481,7 @@
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.open = false; });
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');
