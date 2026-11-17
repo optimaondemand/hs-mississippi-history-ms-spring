@@ -1,6 +1,6 @@
 <!--
     Optima Academy Online - INTERACTIVE Student Lesson Page.
-    Mississippi History - Module 30 - Lesson 30.1
+    Mississippi History - The Long Fight for the Ballot
     DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
 -->
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mississippi History &mdash; Lesson 30.1</title>
+<title>Mississippi History &mdash; The Long Fight for the Ballot</title>
 <style>
     body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
     .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
@@ -56,12 +56,12 @@
 <div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 30</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4</div>
         <div style="font-size: 12px; color: #666;">The Ballot</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 30.1</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -122,9 +122,9 @@
         return;
     }
 
-    var LABEL_PLAY   = "▶️ Listen";
-    var LABEL_PAUSE  = "⏸️ Pause";
-    var LABEL_RESUME = "▶️ Resume";
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
     var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
     var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
 
@@ -175,7 +175,7 @@
         items.forEach(function (item) {
             var clean = item.text.replace(/\s+/g, " ").trim();
             if (!clean) return;
-            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
             sentences.forEach(function (s) {
                 s = s.trim();
                 if (s) q.push({ el: item.el, text: s });
@@ -218,7 +218,7 @@
         };
         currentUtterance = u;
         window.speechSynthesis.speak(u);
-        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
     }
 
     function finish(message) {
@@ -243,7 +243,7 @@
             window.speechSynthesis.resume();
             paused = false;
             playBtn.textContent = LABEL_PAUSE;
-            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
             return;
         }
         queue = collectQueue();
@@ -280,7 +280,7 @@
 
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 30.1</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Long Fight for the Ballot</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
@@ -330,8 +330,8 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A DOOR KEPT SHUT</div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Why So Few Could Vote</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1870, Black men voted in large numbers in Mississippi, and Hiram Revels took a seat in the United States Senate. The Constitution of 1890, which you studied in Module 25, changed that. It set up a poll tax, and it required would-be voters to pass a <a class="gl" href="#glossary" title="A test of reading or understanding given to people who wanted to register to vote. In Mississippi, a registrar judged whether an answer was good enough."><strong>literacy test</strong></a> in which they had to read and explain a section of the state constitution. A white registrar decided whether the answer was good enough. White applicants were often passed, and Black applicants, even teachers and ministers, were often failed.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By 1964, only about seven in a hundred Black adults in Mississippi were registered to vote. A few counties where Black residents were a majority had almost no Black voters. The reasons were not only legal. People who tried to register could lose a job, a loan, or a home. As you saw in Module 28, some paid with their lives. In 1955 the Reverend George Lee and Lamar Smith were killed for working to register voters. The state's <a class="gl" href="#glossary" title="A state agency created by the Mississippi legislature in 1956 to defend segregation and what it called the state's rights. It spied on civil rights workers."><strong>Sovereignty Commission</strong></a> also watched many organizers and kept files on them.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1870, Black men voted in large numbers in Mississippi, and Hiram Revels took a seat in the United States Senate. The Constitution of 1890, which you studied in the lesson &ldquo;The Constitution of 1890&rdquo;, changed that. It set up a poll tax, and it required would-be voters to pass a <a class="gl" href="#glossary" title="A test of reading or understanding given to people who wanted to register to vote. In Mississippi, a registrar judged whether an answer was good enough."><strong>literacy test</strong></a> in which they had to read and explain a section of the state constitution. A white registrar decided whether the answer was good enough. White applicants were often passed, and Black applicants, even teachers and ministers, were often failed.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By 1964, only about seven in a hundred Black adults in Mississippi were registered to vote. A few counties where Black residents were a majority had almost no Black voters. The reasons were not only legal. People who tried to register could lose a job, a loan, or a home. As you saw in the lesson &ldquo;1955: Lee, Smith, and Emmett Till&rdquo;, some paid with their lives. In 1955 the Reverend George Lee and Lamar Smith were killed for working to register voters. The state's <a class="gl" href="#glossary" title="A state agency created by the Mississippi legislature in 1956 to defend segregation and what it called the state's rights. It spied on civil rights workers."><strong>Sovereignty Commission</strong></a> also watched many organizers and kept files on them.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The struggle was older than the 1960s. After World War II, Black veterans like Medgar Evers tried to register and were turned away. In the 1950s, Dr. T. R. M. Howard of Mound Bayou led a group that urged Black Mississippians to register and to buy gas and goods from Black-owned businesses. The state also required applicants' names to be published in the local newspaper. Employers and neighbors could see who had applied, and many applicants lost work. Each barrier made the next one easier to defend, and together they kept the rolls nearly all white.</p>
 <div class="optima-widget ow-reflect">
   <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -422,7 +422,7 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 30.2: Freedom Summer and Atlantic City</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Freedom Summer and Atlantic City</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Continue to see what happened when hundreds of volunteers came to Mississippi in the summer of 1964.</div>
             </div>
         </div>
@@ -430,7 +430,7 @@
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Freedom Vote showed that people were ready. In Lesson 30.2, hundreds of young volunteers arrive in the summer of 1964, and a Mississippi sharecropper takes her case to the national stage.</p>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Freedom Vote showed that people were ready. In the lesson &ldquo;Freedom Summer and Atlantic City&rdquo;, hundreds of young volunteers arrive in the summer of 1964, and a Mississippi sharecropper takes her case to the national stage.</p>
     </div>
 
 </div>
@@ -438,7 +438,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 30.1 &middot; The Long Fight for the Ballot</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The Long Fight for the Ballot</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
