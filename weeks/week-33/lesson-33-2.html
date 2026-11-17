@@ -1,6 +1,6 @@
 <!--
     Optima Academy Online - INTERACTIVE Student Lesson Page.
-    Mississippi History - Module 33 - Lesson 33.2
+    Mississippi History - Why Mississippi Is Poor
     DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
 -->
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mississippi History &mdash; Lesson 33.2</title>
+<title>Mississippi History &mdash; Why Mississippi Is Poor</title>
 <style>
     body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
     .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
@@ -56,12 +56,12 @@
 <div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 33</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4</div>
         <div style="font-size: 12px; color: #666;">The Mississippi Economy</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 33.2</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -122,9 +122,9 @@
         return;
     }
 
-    var LABEL_PLAY   = "▶️ Listen";
-    var LABEL_PAUSE  = "⏸️ Pause";
-    var LABEL_RESUME = "▶️ Resume";
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
     var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
     var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
 
@@ -175,7 +175,7 @@
         items.forEach(function (item) {
             var clean = item.text.replace(/\s+/g, " ").trim();
             if (!clean) return;
-            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
             sentences.forEach(function (s) {
                 s = s.trim();
                 if (s) q.push({ el: item.el, text: s });
@@ -218,7 +218,7 @@
         };
         currentUtterance = u;
         window.speechSynthesis.speak(u);
-        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
     }
 
     function finish(message) {
@@ -243,7 +243,7 @@
             window.speechSynthesis.resume();
             paused = false;
             playBtn.textContent = LABEL_PAUSE;
-            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
             return;
         }
         queue = collectQueue();
@@ -280,7 +280,7 @@
 
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 33.2</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Why Mississippi Is Poor</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
@@ -328,7 +328,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE NUMBERS</div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What "Poor" Means</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">To compare states, economists use a few simple measures. One is <a class="gl" href="#glossary" title="The total income of the people in a place divided by the number of people. It shows the average, not what any one person earns."><strong>per capita income</strong></a>. Another is the <a class="gl" href="#glossary" title="The share of people whose income falls below the poverty line, a dollar amount set by the federal government for each family size."><strong>poverty rate</strong></a>. For generations Mississippi's per capita income has been the lowest or nearly the lowest among the fifty states. In recent years about one in five Mississippians has lived below the poverty line. Those numbers shift from year to year, and they should be checked against the latest tables, which you will read in Primary Source 33.2.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">To compare states, economists use a few simple measures. One is <a class="gl" href="#glossary" title="The total income of the people in a place divided by the number of people. It shows the average, not what any one person earns."><strong>per capita income</strong></a>. Another is the <a class="gl" href="#glossary" title="The share of people whose income falls below the poverty line, a dollar amount set by the federal government for each family size."><strong>poverty rate</strong></a>. For generations Mississippi's per capita income has been the lowest or nearly the lowest among the fifty states. In recent years about one in five Mississippians has lived below the poverty line. Those numbers shift from year to year, and they should be checked against the latest tables, which you will read in the primary source &ldquo;A Census or Economic Table of Mississippi&rdquo;.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The numbers hide differences. Poverty is not spread evenly across the state. It has been deepest in the Delta and in some rural counties, and it has been more common among Black Mississippians than white ones. Living costs in Mississippi are also lower than in many states, so a dollar goes somewhat farther. None of this changes the main fact. Most Mississippi families have had less money to spend, save, and invest than most American families.</p>
 <div class="optima-widget ow-reveal">
   <div class="widget-kicker">&#128221; TRY IT FIRST</div>
@@ -340,7 +340,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; EXPLANATION ONE</div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A Plantation Inheritance</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The first explanation looks to the past. Slavery and then sharecropping built an economy of cheap farm labor, a few large landowners, and few towns. Most farm families owned no land. Banks and shops were few, so there was little money to start new businesses. When cotton failed, there was no second industry to catch the people it left behind. You saw in Module 25 how crop liens kept families in debt.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The first explanation looks to the past. Slavery and then sharecropping built an economy of cheap farm labor, a few large landowners, and few towns. Most farm families owned no land. Banks and shops were few, so there was little money to start new businesses. When cotton failed, there was no second industry to catch the people it left behind. You saw in the lesson &ldquo;Sharecropping and the New Delta&rdquo; how crop liens kept families in debt.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There is a moral side to this story as well. A society that treats most of its workers as labor and not as citizens will find it hard to build the trust that trade and invention require. Neighbors who cannot rely on the courts, the schools, or one another do business more slowly and more rarely. The old order left a habit of low expectations, and habits are slow to change.</p>
 <div class="optima-widget ow-select">
   <div class="widget-kicker">&#9989; CHECK YOUR UNDERSTANDING</div>
@@ -364,9 +364,9 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; EXPLANATION TWO</div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Schools and the Constitution of 1890</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The second explanation points to education. The Constitution of 1890, which you studied in Module 25, took the vote from most Black Mississippians. It also took away their voice in deciding how tax money was spent. Black schools received far less money per pupil than white schools, and many children of every race left school early to work. For decades Mississippi ranked low in how long its adults had stayed in school, and low schooling usually means low pay.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The second explanation points to education. The Constitution of 1890, which you studied in the lesson &ldquo;The Constitution of 1890&rdquo;, took the vote from most Black Mississippians. It also took away their voice in deciding how tax money was spent. Black schools received far less money per pupil than white schools, and many children of every race left school early to work. For decades Mississippi ranked low in how long its adults had stayed in school, and low schooling usually means low pay.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Money was a problem too. A state with low incomes has a small <a class="gl" href="#glossary" title="The total value of the property, income, and sales that a government can tax. A small tax base means little money can be raised."><strong>tax base</strong></a>. Even if it taxes hard, it raises little. For a time Mississippi had no <a class="gl" href="#glossary" title="A law requiring children to attend school until a certain age."><strong>compulsory attendance</strong></a> law, and public kindergartens were not available in every district. In 1982, Governor William Winter led the legislature, in a special session, to pass the Education Reform Act. It created public kindergartens in every district, required children to attend school, and set higher standards for schools. It was a choice to spend on the future, and it was not easy to pass.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Did it work? Change in schools is slow, because a child who enters kindergarten now will not join the work force for many years. In recent years, national tests have shown Mississippi fourth graders gaining in reading faster than students in most states. That progress is real, though it does not yet show up in family income. You will read part of the 1982 law in Primary Source 33.1, so that you can judge its language for yourself.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Did it work? Change in schools is slow, because a child who enters kindergarten now will not join the work force for many years. In recent years, national tests have shown Mississippi fourth graders gaining in reading faster than students in most states. That progress is real, though it does not yet show up in family income. You will read part of the 1982 law in the primary source &ldquo;The Education Reform Act of 1982&rdquo;, so that you can judge its language for yourself.</p>
 <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
   <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; MISSISSIPPI HISTORY</div>
   <div style="font-size: 17px; color: #0E1C42; margin-bottom: 8px;"><strong>A Governor Who Looked Back</strong></div>
@@ -399,14 +399,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 33.1</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>The Education Reform Act of 1982</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read an excerpt from the Education Reform Act of 1982.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 33.2</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>A Census or Economic Table of Mississippi</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read a census or state economic table.</div>
             </div>
         </div>
@@ -436,7 +436,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 33.2 &middot; Why Mississippi Is Poor</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Why Mississippi Is Poor</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
