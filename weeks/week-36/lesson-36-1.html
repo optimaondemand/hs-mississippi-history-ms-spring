@@ -1,6 +1,6 @@
 <!--
     Optima Academy Online - INTERACTIVE Student Lesson Page.
-    Mississippi History - Module 36 - Lesson 36.1
+    Mississippi History - The Music: Blues, Gospel, Elvis
     DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
 -->
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mississippi History &mdash; Lesson 36.1</title>
+<title>Mississippi History &mdash; The Music: Blues, Gospel, Elvis</title>
 <style>
     body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
     .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
@@ -56,12 +56,12 @@
 <div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 36</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4</div>
         <div style="font-size: 12px; color: #666;">What Mississippi Gave the World</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 36.1</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -122,9 +122,9 @@
         return;
     }
 
-    var LABEL_PLAY   = "▶️ Listen";
-    var LABEL_PAUSE  = "⏸️ Pause";
-    var LABEL_RESUME = "▶️ Resume";
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
     var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
     var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
 
@@ -175,7 +175,7 @@
         items.forEach(function (item) {
             var clean = item.text.replace(/\s+/g, " ").trim();
             if (!clean) return;
-            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
             sentences.forEach(function (s) {
                 s = s.trim();
                 if (s) q.push({ el: item.el, text: s });
@@ -218,7 +218,7 @@
         };
         currentUtterance = u;
         window.speechSynthesis.speak(u);
-        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
     }
 
     function finish(message) {
@@ -243,7 +243,7 @@
             window.speechSynthesis.resume();
             paused = false;
             playBtn.textContent = LABEL_PAUSE;
-            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
             return;
         }
         queue = collectQueue();
@@ -280,7 +280,7 @@
 
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 36.1</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Music: Blues, Gospel, Elvis</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
@@ -354,8 +354,8 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; LISTENING TO THE DELTA</div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Lomax and the Sound Collectors</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1941 and 1942, the <a class="gl" href="#glossary" title="A scholar who collects and studies the songs, stories, and customs of ordinary people."><strong>folklorist</strong></a> Alan Lomax came to Coahoma County to record the music of the Delta for the Library of Congress. He worked with scholars from Fisk University, a Black university in Nashville. The recordings captured church songs, work songs, and blues. At a plantation near Clarksdale, a young tractor driver named McKinley Morganfield played for the recording machine. The world would later know him as Muddy Waters.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Why does this matter? Because such recordings let you hear the people themselves. They are primary sources. In Primary Source 36.2 you will study them as a historian would, asking what the singers meant and what the collectors chose to record. Remember that a recording is not an accident. Someone decided what to record, where to set up the machine, and whom to ask.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many of the musicians left Mississippi. During the Great Migration, which you read about in Module 26, thousands of Black families moved north on trains and highways to Memphis, St. Louis, and Chicago. Muddy Waters moved to Chicago in the 1940s, and there he plugged in an electric guitar and helped create the Chicago blues. Mississippi's music traveled with its people. It was a gift to the nation, given by those the state had often treated badly.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Why does this matter? Because such recordings let you hear the people themselves. They are primary sources. In the primary source &ldquo;The Lomax Recordings in Coahoma County&rdquo; you will study them as a historian would, asking what the singers meant and what the collectors chose to record. Remember that a recording is not an accident. Someone decided what to record, where to set up the machine, and whom to ask.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many of the musicians left Mississippi. During the Great Migration, which you read about earlier in the course, thousands of Black families moved north on trains and highways to Memphis, St. Louis, and Chicago. Muddy Waters moved to Chicago in the 1940s, and there he plugged in an electric guitar and helped create the Chicago blues. Mississippi's music traveled with its people. It was a gift to the nation, given by those the state had often treated badly.</p>
 <div class="optima-widget ow-reflect">
   <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
   <div class="widget-question">Before you move on: why do you think the blues came from the Delta? (No wrong answer.)</div>
@@ -368,7 +368,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; GOSPEL, COUNTRY, AND ELVIS</div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Where the Streams Meet</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The same churches that taught young people to sing also produced <a class="gl" href="#glossary" title="Religious music, rooted in the Black church, with strong harmonies and a message of faith and hope."><strong>gospel</strong></a>. The Black church, with its strong harmony and its message of hope, gave Mississippi's music a second root. Roebuck Staples, who grew up near Winona, later led the Staple Singers, a family group whose gospel songs became part of the civil rights movement. In the 1980s the Mississippi Mass Choir was formed in Jackson and became one of the state's best-known gospel choirs. In the movement itself, as in the campaign you read about in Module 30, songs such as "This Little Light of Mine" gave courage to people who faced danger at the courthouse door.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The same churches that taught young people to sing also produced <a class="gl" href="#glossary" title="Religious music, rooted in the Black church, with strong harmonies and a message of faith and hope."><strong>gospel</strong></a>. The Black church, with its strong harmony and its message of hope, gave Mississippi's music a second root. Roebuck Staples, who grew up near Winona, later led the Staple Singers, a family group whose gospel songs became part of the civil rights movement. In the 1980s the Mississippi Mass Choir was formed in Jackson and became one of the state's best-known gospel choirs. In the movement itself, as in the campaign you read about in the lesson &ldquo;Freedom Summer and Atlantic City&rdquo;, songs such as "This Little Light of Mine" gave courage to people who faced danger at the courthouse door.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">White Mississippians made music too. Jimmie Rodgers, from Meridian, sang songs that mixed blues, folk, and yodeling. Because of his influence, he is often called the Father of Country Music. He died young, in 1933, but his records were played for years. White and Black musicians heard one another on the radio, in the churches, and in the juke joints and street corners, even when the law kept them from sitting together.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Elvis Presley was born in Tupelo on January 8, 1935, in a two-room house that his father built. He grew up in a family that sang in the Assembly of God church, and at about age eleven he received his first guitar. In 1948 the family moved to Memphis. There, in 1954, he recorded for Sun Records a song that had been written by Arthur Crudup, a bluesman from Forest, Mississippi. In Elvis's voice you can hear the church, the blues, and country music together. That mixture made him famous. Whether Mississippians were proud of it or uneasy about it depended on who was listening.</p>
 <div class="optima-widget ow-select">
@@ -412,14 +412,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 36.1</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Mark Twain, Life on the Mississippi</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read the river chapters of Mark Twain's Life on the Mississippi (1883).</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 36.2</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>The Lomax Recordings in Coahoma County</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Study the Lomax recordings made in Coahoma County, 1941 to 1942.</div>
             </div>
         </div>
@@ -449,7 +449,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 36.1 &middot; The Music: Blues, Gospel, Elvis</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The Music: Blues, Gospel, Elvis</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
