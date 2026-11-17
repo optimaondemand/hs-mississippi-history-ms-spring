@@ -1,6 +1,6 @@
 <!--
     Optima Academy Online - Student Primary Source Page.
-    Mississippi History - Module 31 - Primary Source 31.2
+    Mississippi History - A Mississippi Law or Order on School Desegregation
     DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
     DRAFT STATUS: written from memory. The source itself is NOT yet inserted. Nothing in the headnote is quoted from the source.
     TEACHER/BUILDER NOTE: SOURCE NOT YET CHOSEN. Map: 'to be located.' Candidates: the 1969 or 1970 federal court desegregation orders for Mississippi districts; the 1964 state tuition grant law for private schools; the 1954 school-closing amendment (verify). Intro is generic; rewrite once chosen.
@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mississippi History &mdash; Primary Source 31.2</title>
+<title>Mississippi History &mdash; A Mississippi Law or Order on School Desegregation</title>
 <style>
     body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
     .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
@@ -35,12 +35,12 @@
 <div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 31</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4</div>
         <div style="font-size: 12px; color: #666;">A Changing State</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Primary Source</div>
-        <div style="font-size: 17px; color: #0e1c42;">Primary Source 31.2</div>
+        <div style="font-size: 17px; color: #0e1c42;">Primary Source</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Type</div>
@@ -101,9 +101,9 @@
         return;
     }
 
-    var LABEL_PLAY   = "▶️ Listen";
-    var LABEL_PAUSE  = "⏸️ Pause";
-    var LABEL_RESUME = "▶️ Resume";
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
     var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
     var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
 
@@ -154,7 +154,7 @@
         items.forEach(function (item) {
             var clean = item.text.replace(/\s+/g, " ").trim();
             if (!clean) return;
-            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
             sentences.forEach(function (s) {
                 s = s.trim();
                 if (s) q.push({ el: item.el, text: s });
@@ -197,7 +197,7 @@
         };
         currentUtterance = u;
         window.speechSynthesis.speak(u);
-        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
     }
 
     function finish(message) {
@@ -222,7 +222,7 @@
             window.speechSynthesis.resume();
             paused = false;
             playBtn.textContent = LABEL_PAUSE;
-            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
             return;
         }
         queue = collectQueue();
@@ -259,7 +259,7 @@
 
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Primary Source 31.2</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Primary Source</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A Mississippi Law or Order on School Desegregation</div>
         <div style="font-size: 16px; color: #666;">Primary Source</div>
     </div>
@@ -318,7 +318,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Primary Source Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Primary Source 31.2 &middot; A Mississippi Law or Order on School Desegregation</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">A Mississippi Law or Order on School Desegregation</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
