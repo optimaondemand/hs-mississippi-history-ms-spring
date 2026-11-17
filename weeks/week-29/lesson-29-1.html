@@ -1,6 +1,6 @@
 <!--
     Optima Academy Online - INTERACTIVE Student Lesson Page.
-    Mississippi History - Module 29 - Lesson 29.1
+    Mississippi History - James Meredith and Ross Barnett
     DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
 -->
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mississippi History &mdash; Lesson 29.1</title>
+<title>Mississippi History &mdash; James Meredith and Ross Barnett</title>
 <style>
     body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
     .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
@@ -56,12 +56,12 @@
 <div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 29</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4</div>
         <div style="font-size: 12px; color: #666;">Who Holds Authority?</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 29.1</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -122,9 +122,9 @@
         return;
     }
 
-    var LABEL_PLAY   = "▶️ Listen";
-    var LABEL_PAUSE  = "⏸️ Pause";
-    var LABEL_RESUME = "▶️ Resume";
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
     var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
     var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
 
@@ -175,7 +175,7 @@
         items.forEach(function (item) {
             var clean = item.text.replace(/\s+/g, " ").trim();
             if (!clean) return;
-            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
             sentences.forEach(function (s) {
                 s = s.trim();
                 if (s) q.push({ el: item.el, text: s });
@@ -218,7 +218,7 @@
         };
         currentUtterance = u;
         window.speechSynthesis.speak(u);
-        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
     }
 
     function finish(message) {
@@ -243,7 +243,7 @@
             window.speechSynthesis.resume();
             paused = false;
             playBtn.textContent = LABEL_PAUSE;
-            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
             return;
         }
         queue = collectQueue();
@@ -280,7 +280,7 @@
 
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 29.1</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">James Meredith and Ross Barnett</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
@@ -330,7 +330,7 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE APPLICANT</div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">James Meredith</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">James Meredith was born in 1933 near Kosciusko, Mississippi. He served nine years in the Air Force and then studied at Jackson State College. In January 1961 he applied to the University of Mississippi, known as Ole Miss. It was the state's best-known public university, and it had never admitted a Black student. Meredith believed that, as a citizen, he had a right to attend it.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Meredith did not act alone. Medgar Evers of the NAACP, whom you will meet in Lesson 29.2, advised him and helped him find lawyers. He also brought college credits from Jackson State, so on paper he met the university's standards. Still, the decision to apply was his own. He was one man asking his state to treat him the way it treated any other qualified veteran, and he understood that the answer might put his life in danger.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Meredith did not act alone. Medgar Evers of the NAACP, whom you will meet in the lesson &ldquo;Medgar Evers and the Sovereignty Commission&rdquo;, advised him and helped him find lawyers. He also brought college credits from Jackson State, so on paper he met the university's standards. Still, the decision to apply was his own. He was one man asking his state to treat him the way it treated any other qualified veteran, and he understood that the answer might put his life in danger.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The university turned him down, pointing to problems with his paperwork. Meredith did not give up. With lawyers from the NAACP Legal Defense Fund, led by Constance Baker Motley, he sued. The case took twenty months. In June 1962 a federal appeals court ordered the university to admit him. In September, Justice Hugo Black of the Supreme Court, a former senator from Alabama, refused to block that order. The law was now clear.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">State officials still would not accept it. The board that ran the state's colleges named Governor Ross Barnett as the university's <a class="gl" href="#glossary" title="An official who keeps the official list of students at a school or of voters in a county."><strong>registrar</strong></a>, so that he could turn Meredith away in person. Several times that September, Meredith tried to register. Barnett refused him, and later Lieutenant Governor Paul Johnson and state police blocked his way at the campus gate.</p>
 <div class="optima-widget ow-reflect">
@@ -433,7 +433,7 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 29.2: Medgar Evers and the Sovereignty Commission</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Medgar Evers and the Sovereignty Commission</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Continue to meet the man who organized for the NAACP in Mississippi, and the state agency that watched him.</div>
             </div>
         </div>
@@ -441,7 +441,7 @@
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Meredith's enrollment was not the only test that year. Lesson 29.2 meets Medgar Evers, who spent nine years organizing across the state, and a state agency that spied on people like him.</p>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Meredith's enrollment was not the only test that year. The lesson &ldquo;Medgar Evers and the Sovereignty Commission&rdquo; meets Medgar Evers, who spent nine years organizing across the state, and a state agency that spied on people like him.</p>
     </div>
 
 </div>
@@ -449,7 +449,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 29.1 &middot; James Meredith and Ross Barnett</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">James Meredith and Ross Barnett</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
