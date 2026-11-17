@@ -1,6 +1,6 @@
 <!--
     Optima Academy Online - INTERACTIVE Student Lesson Page.
-    Mississippi History - Module 33 - Lesson 33.1
+    Mississippi History - From Cotton to Catfish and Cars
     DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
 -->
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mississippi History &mdash; Lesson 33.1</title>
+<title>Mississippi History &mdash; From Cotton to Catfish and Cars</title>
 <style>
     body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
     .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
@@ -56,12 +56,12 @@
 <div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 33</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4</div>
         <div style="font-size: 12px; color: #666;">The Mississippi Economy</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 33.1</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -122,9 +122,9 @@
         return;
     }
 
-    var LABEL_PLAY   = "▶️ Listen";
-    var LABEL_PAUSE  = "⏸️ Pause";
-    var LABEL_RESUME = "▶️ Resume";
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
     var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
     var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
 
@@ -175,7 +175,7 @@
         items.forEach(function (item) {
             var clean = item.text.replace(/\s+/g, " ").trim();
             if (!clean) return;
-            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
             sentences.forEach(function (s) {
                 s = s.trim();
                 if (s) q.push({ el: item.el, text: s });
@@ -218,7 +218,7 @@
         };
         currentUtterance = u;
         window.speechSynthesis.speak(u);
-        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
     }
 
     function finish(message) {
@@ -243,7 +243,7 @@
             window.speechSynthesis.resume();
             paused = false;
             playBtn.textContent = LABEL_PAUSE;
-            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
             return;
         }
         queue = collectQueue();
@@ -280,7 +280,7 @@
 
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 33.1</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">From Cotton to Catfish and Cars</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
@@ -328,8 +328,8 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; KING COTTON, WEAKENED</div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A State Built on One Crop</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">For about a century, cotton was the Mississippi economy. The rich soil of the Delta, the river, and, until 1865, enslaved labor made cotton the state's main source of money. After the Civil War, sharecropping, which you studied in Module 25, kept cotton at the center of life. Planters, merchants, and bankers all depended on the price of a single crop. When the price rose, the state boomed. When it fell, farm families fell into debt. An economy tied to one crop is fragile because a single bad event can hurt almost everyone at once.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Several bad events came. The <a class="gl" href="#glossary" title="A small beetle that feeds on cotton plants and can destroy much of a crop."><strong>boll weevil</strong></a> spread into Mississippi in the early 1900s and in some years ruined much of the crop. The flood of 1927 drowned fields across the Delta. Then, in the 1930s, the Great Depression pushed the price of cotton very low. You saw in Module 27 how these troubles piled up. Landowners and tenants both suffered, and many families, especially Black families, left Mississippi for jobs in Chicago, Detroit, and other northern cities.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">For about a century, cotton was the Mississippi economy. The rich soil of the Delta, the river, and, until 1865, enslaved labor made cotton the state's main source of money. After the Civil War, sharecropping, which you studied in the lesson &ldquo;Sharecropping and the New Delta&rdquo;, kept cotton at the center of life. Planters, merchants, and bankers all depended on the price of a single crop. When the price rose, the state boomed. When it fell, farm families fell into debt. An economy tied to one crop is fragile because a single bad event can hurt almost everyone at once.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Several bad events came. The <a class="gl" href="#glossary" title="A small beetle that feeds on cotton plants and can destroy much of a crop."><strong>boll weevil</strong></a> spread into Mississippi in the early 1900s and in some years ruined much of the crop. The flood of 1927 drowned fields across the Delta. Then, in the 1930s, the Great Depression pushed the price of cotton very low. You saw in the lesson &ldquo;Depression, Machines, and Mississippi at War&rdquo; how these troubles piled up. Landowners and tenants both suffered, and many families, especially Black families, left Mississippi for jobs in Chicago, Detroit, and other northern cities.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Machines changed the farm next. A mechanical cotton picker, which could do the work of many hands, was shown to Delta planters at a demonstration near Clarksdale in 1944, and that day is often marked as a turning point. In the following decades, machines and new farm chemicals cut the labor a cotton farm needed. No law ordered this change. It came from thousands of separate decisions by landowners who wanted to lower their costs, and each decision could mean a family without work. Great events are sometimes made of many small choices.</p>
 <div class="optima-widget ow-select">
   <div class="widget-kicker">&#9989; CHECK YOUR UNDERSTANDING</div>
@@ -342,7 +342,7 @@
     <div class="widget-row-prompt">Which cause meant landowners needed far fewer workers?</div>
     <div class="widget-options"><button data-correct="1">The mechanical picker</button><button>The boll weevil</button><button>The 1927 flood</button><button>The price of cotton</button></div>
   </div>
-  <div class="widget-row" data-fb="Correct. You studied it in Module 27." data-hint="Look back at Module 27.">
+  <div class="widget-row" data-fb="Correct. You studied it in the lesson &ldquo;Depression, Machines, and Mississippi at War&rdquo;.>
     <div class="widget-row-prompt">Which cause drowned fields across the Delta in 1927?</div>
     <div class="widget-options"><button>The mechanical picker</button><button>The boll weevil</button><button>The Great Depression</button><button data-correct="1">The Mississippi River flood</button></div>
   </div>
@@ -355,7 +355,7 @@
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Balance Agriculture With Industry</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By the 1930s many leaders believed that farming alone could not support the state. In 1936, during the Depression, the legislature passed a plan backed by Governor Hugh White. It was called Balance Agriculture With Industry, and people shortened it to BAWI. Under the plan, a town could sell a <a class="gl" href="#glossary" title="A loan in the form of a certificate. A town or state sells bonds to raise money and promises to pay buyers back with interest."><strong>bond</strong></a> to raise money, build a factory, and rent it cheaply to a company that agreed to open a plant there. The company might also be excused from some local taxes for a number of years. Such offers are called <a class="gl" href="#glossary" title="A reward or benefit, such as a tax break, offered to persuade someone to make a particular choice."><strong>incentives</strong></a>.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Who gained? Workers gained paychecks in places where cash was scarce. Towns gained a reason to hope. But the early plants mostly made clothing, furniture, and wood products, and the wages were low. The towns also took on a risk, because they had to pay back the bonds even if a company left. Supporters said the plan gave people jobs when nothing else did. Critics said it tied the state to low pay and to firms that could leave at any time. Both statements held some truth.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ships came to the Gulf Coast as well. Ingalls Shipbuilding opened in Pascagoula in 1938. In the Second World War, which you studied in Module 27, it grew quickly, and it has long been among the state's larger employers. Its story shows that a few steady, skilled industries can matter more than many small ones.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ships came to the Gulf Coast as well. Ingalls Shipbuilding opened in Pascagoula in 1938. In the Second World War, which you studied in the lesson &ldquo;Depression, Machines, and Mississippi at War&rdquo;, it grew quickly, and it has long been among the state's larger employers. Its story shows that a few steady, skilled industries can matter more than many small ones.</p>
 <div class="optima-widget ow-reflect">
   <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
   <div class="widget-question">Before you move on: if you led a Mississippi town in 1936, which incentive would you offer a company first? (No wrong answer.)</div>
@@ -411,14 +411,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 33.1</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>The Education Reform Act of 1982</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read an excerpt from the Education Reform Act of 1982.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 33.2</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>A Census or Economic Table of Mississippi</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read a census or state economic table.</div>
             </div>
         </div>
@@ -448,7 +448,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 33.1 &middot; From Cotton to Catfish and Cars</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">From Cotton to Catfish and Cars</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
