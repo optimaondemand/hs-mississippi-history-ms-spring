@@ -1,6 +1,6 @@
 <!--
     Optima Academy Online - INTERACTIVE Student Lesson Page.
-    Mississippi History - Module 31 - Lesson 31.2
+    Mississippi History - The Open State
     DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
 -->
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mississippi History &mdash; Lesson 31.2</title>
+<title>Mississippi History &mdash; The Open State</title>
 <style>
     body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
     .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
@@ -56,12 +56,12 @@
 <div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 31</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4</div>
         <div style="font-size: 12px; color: #666;">A Changing State</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 31.2</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -122,9 +122,9 @@
         return;
     }
 
-    var LABEL_PLAY   = "▶️ Listen";
-    var LABEL_PAUSE  = "⏸️ Pause";
-    var LABEL_RESUME = "▶️ Resume";
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
     var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
     var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
 
@@ -175,7 +175,7 @@
         items.forEach(function (item) {
             var clean = item.text.replace(/\s+/g, " ").trim();
             if (!clean) return;
-            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
             sentences.forEach(function (s) {
                 s = s.trim();
                 if (s) q.push({ el: item.el, text: s });
@@ -218,7 +218,7 @@
         };
         currentUtterance = u;
         window.speechSynthesis.speak(u);
-        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
     }
 
     function finish(message) {
@@ -243,7 +243,7 @@
             window.speechSynthesis.resume();
             paused = false;
             playBtn.textContent = LABEL_PAUSE;
-            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
             return;
         }
         queue = collectQueue();
@@ -280,7 +280,7 @@
 
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 31.2</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Open State</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
@@ -331,7 +331,7 @@
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Robert Clark was a teacher in Holmes County. He won his seat in the 1967 election, the first in which many Black Mississippians could vote in large numbers. For the next thirty-six years he served in the legislature, and in 1992 his colleagues chose him as speaker pro tempore. His career showed what was possible after the Voting Rights Act.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Others followed. Charles Evers, the brother of Medgar Evers, was elected mayor of Fayette in 1969. In 1986, Mike Espy, from the Delta, became the first Black Mississippian elected to Congress since Reconstruction. Over time, Mississippi came to have more Black elected officials than any other state. The state that had once worked hardest to keep Black citizens from the ballot now has a record that people across the country notice.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Change also came to ordinary places. After the Civil Rights Act of 1964, lunch counters, hotels, and theaters could no longer refuse to serve people because of their race. Many white business owners adjusted quietly. Some people were glad of the change, and some were not. The new rules were enforced, and over time they became part of daily life.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Local offices changed too. In the Delta and other counties where Black residents were a majority, they began winning seats on boards of supervisors, school boards, and city councils. You will see in Module 32 how those local boards work. These offices decide who gets roads, who gets jobs, and how tax money is spent, so the change mattered in everyday ways.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Local offices changed too. In the Delta and other counties where Black residents were a majority, they began winning seats on boards of supervisors, school boards, and city councils. You will see in the lesson &ldquo;Local Government and Citizenship&rdquo; how those local boards work. These offices decide who gets roads, who gets jobs, and how tax money is spent, so the change mattered in everyday ways.</p>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
   <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128368; DOORS THAT OPENED</div>
     <div style="display: flex; gap: 14px; align-items: flex-start; margin-bottom: 10px;"><div style="min-width: 78px; font-size: 15px; color: #FFFFFF; background: #0E1C42; border-radius: 6px; padding: 4px 8px; text-align: center;">1964</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Public places must serve people of every race.</div></div>
@@ -386,7 +386,7 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FACING THE PAST</div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Late Justice and Honest Memory</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Some of the old cases were reopened years later. Byron De La Beckwith was convicted in 1994, and Sam Bowers in 1998. Edgar Ray Killen was convicted in 2005. Each trial came long after the crime, and each came because someone refused to let the case rest. Families, reporters, prosecutors, and jurors all had a part.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The state's own institutions changed as well. In 1973 the legislature stopped funding the Sovereignty Commission that you met in Lesson 29.2, and its files were later opened for anyone to read. A government that once spied on citizens for asking for their rights had now made its record public. That is not a small thing. A community that lets its records be read has begun to tell the truth about itself.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The state's own institutions changed as well. In 1973 the legislature stopped funding the Sovereignty Commission that you met in the lesson &ldquo;Medgar Evers and the Sovereignty Commission&rdquo;, and its files were later opened for anyone to read. A government that once spied on citizens for asking for their rights had now made its record public. That is not a small thing. A community that lets its records be read has begun to tell the truth about itself.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Governor William Winter, who led the state from 1980 to 1984, spent much of his later life working on <a class="gl" href="#glossary" title="The effort to repair relationships between groups after a history of injustice, by telling the truth and working together."><strong>racial reconciliation</strong></a>. He helped found a center at the University of Mississippi, now called the Winter Institute, that brings people together to talk about the state's history. Reconciliation is not forgetting. It means telling the truth about what happened and working together to do better.</p>
 <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
   <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; MISSISSIPPI TODAY</div>
@@ -394,7 +394,7 @@
   <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">For more than a century, Mississippi's state flag carried the Confederate battle emblem, which many Black Mississippians saw as a symbol of the system that had kept them from full citizenship. Over the years many leaders, businesses, and universities called for a change. In June 2020 the legislature voted to retire the old flag, and in November of that year voters approved a new design with a magnolia blossom. Many Mississippians welcomed the change. Others opposed it and wanted to keep the old flag. The change shows that what a state chooses to honor can be argued over, and changed, by its people.</div>
 </div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">So was Mississippi an open state? In many ways it was far more open than before. People could vote, run for office, eat in any restaurant, and attend any public school or university. Yet the state also kept some of the old gaps, in income, schooling, and trust. In the discussion, you will weigh which of these changes mattered most and why.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open does not mean finished. Mississippi still faces gaps in income, in school funding, and in health. You will study some of those problems in Module 33. The people who worked for change in this module did not expect to solve everything. They expected to open doors and to let those who came after them walk through. Whether that work is carried on is a question for each new generation.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open does not mean finished. Mississippi still faces gaps in income, in school funding, and in health. You will study some of those problems in the lesson &ldquo;Why Mississippi Is Poor&rdquo;. The people who worked for change in this module did not expect to solve everything. They expected to open doors and to let those who came after them walk through. Whether that work is carried on is a question for each new generation.</p>
 <div class="optima-widget ow-select">
   <div class="widget-kicker">&#9989; CHECK YOUR UNDERSTANDING</div>
   <div class="widget-question">Check your understanding. Choose the best answer for each item.</div>
@@ -419,14 +419,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 31.1</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Alexander v. Holmes County Board of Education</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read an excerpt from Alexander v. Holmes County Board of Education (1969).</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 31.2</strong></div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>A Mississippi Law or Order on School Desegregation</strong></div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read a Mississippi law or order on school desegregation.</div>
             </div>
         </div>
@@ -456,7 +456,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 31.2 &middot; The Open State</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The Open State</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
